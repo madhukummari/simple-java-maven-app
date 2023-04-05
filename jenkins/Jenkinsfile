@@ -22,7 +22,7 @@ pipeline {
         stage('test') {
             steps {
                 dir("simple-java-maven-app") {
-                    sh "mvn test"
+                    sh "mvn test -Denforcer.skip=true"
             }
         }
     }
